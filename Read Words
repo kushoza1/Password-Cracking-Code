@@ -1,0 +1,29 @@
+def read_words():
+    fin = open('words.txt')
+    cake_count = 0
+    for w in fin:
+        word = w.strip()
+        if len(word) > 20:
+            print(word)
+        if 'cake' in word:
+            cake_count = cake_count + 1
+            print(word)
+
+    fin.close()
+    print('Number of words with cake: ' + str(cake_count))
+
+def read_words2():
+    fin = open('words.txt')
+    cake_count = 0
+    words = fin.read().split()
+    for word in words:
+        if len(word) > 20:
+            print(word)
+        if 'cake' in word:
+            cake_count = cake_count + 1
+            print(word)
+
+    fin.close()
+    print('Number of words with cake: ' + str(cake_count))
+
+
