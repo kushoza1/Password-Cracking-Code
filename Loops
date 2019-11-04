@@ -1,0 +1,26 @@
+def run_loops(outer, inner):
+    counter = 0
+    for i in range(outer):
+        print("Outside loop position: " + str(i))
+        for j in range(inner):
+            print("Inside loop position: " + str(j))
+            counter = counter + 1
+            print("hello!")
+    print("Count: " + str(counter))
+
+def find_max(num_list):
+    'print largest in num_list, with at least one number'
+    # works, but checks the first number twice
+    largest_so_far = num_list[0]
+    for val in num_list:
+        if val > largest_so_far:
+            largest_so_far = val
+    print("Largest: " + str(largest_so_far))
+    
+def find_max2(num_list):
+    'print largest in num_list, with at least one number'
+    largest_so_far = num_list[0]
+    for i in range(1, len(num_list)):
+        if num_list[i] > largest_so_far:
+            largest_so_far = num_list[i]
+    print("Largest: " + str(largest_so_far))
